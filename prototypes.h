@@ -1,8 +1,8 @@
 /*
  * prototypes.h
  *
- *  Created on: 10 janv. 2014
- *      Author: osmju
+ *  Created on: 06/06/2020
+ *      Author: Mohamed El Osrouti, Nora Folon, Amadis Horbach
  */
 
 #ifndef PROTOTYPES_H_
