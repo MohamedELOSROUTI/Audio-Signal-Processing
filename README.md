@@ -56,5 +56,22 @@ The time required to assess the background noise level Tnoise and the generation
 
 ### 3.1 Main variables
 
+- T_in: time during which a window of the background noise level is evaluated, fixed to 0.5 seconds;
+- T_noise: total time during which the background noise level is evaluated, fixed to 5 seconds;
+- T_wait: maximum waiting time for a signal, fixed to 25 seconds;
+- T_play: time during which the note is played, fixed to 5 seconds;
+- time_batch: time that a batch takes to be sampled, equal to BUFCOUNT / Fs.
+- table_size: constant used for generating the sine wave signal and determining its accuracy, equal to 256.
+
+### 3.2 Main functions
+
+- fillSinus() : initialise the output sinewave vector.
+- Square() : computes the squared of a variable (useful to evaluate the background noise level).
+- FundamentalFreq(): Function that computes the fundamental frequency of a batch (using FFT).
+- generateSignal(): updates the output batch with the new fundamental frequency.
+- generateSilence(): initialise to 0 the output batch after the output pitch.
+- process_buffer(): main function of the code that executes all the states described above.
+- main(): main function.
+
 
 
