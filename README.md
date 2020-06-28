@@ -3,7 +3,7 @@ Extract the main fourier component of a sound (hiss, musical note, ...) using th
 
 We use frame-based signal processing. The CPU receives a block of samples (called frame) which fills the input buffer. This will give more time to the CPU to perform complex operations between 2 frames (FFT). Framed-based processing has many advantages over simple sampled-based signal processing : 
 
-![](https://i.imgur.com/zYt1XEp.png)
+![](https://i.imgur.com/zYt1XEp.png =600x)
 
 
 We also make use of the DMA "Direct Memory Access" controller integrated to the DSP. It is in charge of filling the input buffer by triggering periodically an interrupt.
@@ -38,7 +38,7 @@ The state diagram shown in the following figure summarizes the general organizat
 diagram having four different states, it was decided to use a global variable ***state*** in order to represent these states. 
 
 
-![](https://i.imgur.com/7ToSKfe.png)
+![](https://i.imgur.com/7ToSKfe.png =600x)
 
 1. state = 1: The background noise Ln is evaluated for a duration Tnoise in order to determine the limit of detection Lthresh.
 2. state = 2: The second state consists in waiting to receive a whistle or a note input music. This condition is fulfilled when the effective value of the signal detected by the DSP input exceeds Lthresh. When the waiting is too long, i.e. the time spent in this state exceeds Twait, we return to state = 1.
