@@ -3,7 +3,7 @@ Extract the main fourier component of a sound (hiss, musical note, ...) using th
 
 We use frame-based signal processing. The CPU receives a block of samples (called frame) which fills the input buffer. This will give more time to the CPU to perform complex operations between 2 frames (FFT). Framed-based processing has many advantages over simple sampled-based signal processing : 
 
-![](https://i.imgur.com/zYt1XEp.png =600x)
+![](https://i.imgur.com/zYt1XEp.png)
 
 
 We also make use of the DMA "Direct Memory Access" controller integrated to the DSP. It is in charge of filling the input buffer by triggering periodically an interrupt.
