@@ -1,8 +1,8 @@
 /*
  * isr.c
  *
- *  Created on: 10 janv. 2014
- *      Author: osmju
+ *  Created on: 06/06/2020
+ *      Authors: Mohamed EL Osrouti, Nora Folon, Amadis Horbach
  */
 #include <math.h>
 #include "L138_aic3106_init_edma.h"
