@@ -38,7 +38,7 @@ The state diagram shown in the following figure summarizes the general organizat
 diagram having four different states, it was decided to use a global variable ***state*** in order to represent these states. 
 
 
-![](https://i.imgur.com/7ToSKfe.png =600x)
+![](https://i.imgur.com/7ToSKfe.png)
 
 1. state = 1: The background noise Ln is evaluated for a duration Tnoise in order to determine the limit of detection Lthresh.
 2. state = 2: The second state consists in waiting to receive a whistle or a note input music. This condition is fulfilled when the effective value of the signal detected by the DSP input exceeds Lthresh. When the waiting is too long, i.e. the time spent in this state exceeds Twait, we return to state = 1.
